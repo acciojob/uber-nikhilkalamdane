@@ -27,6 +27,12 @@ public class TripBooking {
 
     private int bill;
 
+    public TripBooking(String fromLocation, String toLocation, int distanceInKm) {
+        this.fromLocation = fromLocation;
+        this.toLocation = toLocation;
+        this.distanceInKm = distanceInKm;
+    }
+
     @ManyToOne
     @JoinColumn
     private Driver driver;

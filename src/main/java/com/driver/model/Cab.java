@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.sql.Driver;
+
 
 
 @Entity
@@ -21,6 +21,11 @@ public class Cab {
     private int id;
     private int perKmRate;
     private boolean available;
+
+    public Cab(int perKmRate, boolean available) {
+        this.perKmRate = perKmRate;
+        this.available = available;
+    }
 
     @OneToOne
     @JoinColumn

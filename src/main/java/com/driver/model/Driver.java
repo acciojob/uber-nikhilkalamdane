@@ -22,6 +22,11 @@ public class Driver {
     private String mobile;
     private String password;
 
+    public Driver(String mobile, String password) {
+        this.mobile = mobile;
+        this.password = password;
+    }
+
     @OneToOne(mappedBy = "driver",cascade = CascadeType.ALL)
     private Cab cab;
 
