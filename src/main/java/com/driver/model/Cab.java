@@ -27,6 +27,10 @@ public class Cab {
         this.available = available;
     }
 
+    public boolean getAvailable() {
+        return available;
+    }
+
     @OneToOne
     @JoinColumn
     private Driver driver;
